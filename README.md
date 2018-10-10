@@ -1,2 +1,2 @@
 # Minesweeper
-Minesweeper in javafx
+This program is your standard minesweeper created in javafx.
