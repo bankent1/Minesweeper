@@ -34,6 +34,7 @@ public class MineSweeperMain extends Application {
 	private static final int TEXT_SIZE = 20;
 	
 	// images for the tiles
+	private static String currDir = System.getProperty("user.dir");
 	private static Image testImg;
 	private static Image bombImg;
 	private static Image flagImg;
@@ -215,19 +216,20 @@ public class MineSweeperMain extends Application {
 	}
 	
 	public void setupImages() {
+		//System.out.println(currDir);
 		try {
-			testImg = new Image(new FileInputStream("Pics\\Test.png"));
-			bombImg = new Image(new FileInputStream("Pics\\Bomb.png"));
-			flagImg = new Image(new FileInputStream("Pics\\Flag.png"));
-			emptyImg = new Image(new FileInputStream("Pics\\Empty.png"));
-			oneImg = new Image(new FileInputStream("Pics\\One.png"));
-			twoImg = new Image(new FileInputStream("Pics\\Two.png"));
-			threeImg = new Image(new FileInputStream("Pics\\Three.png"));
-			fourImg = new Image(new FileInputStream("Pics\\Four.png"));
-			fiveImg = new Image(new FileInputStream("Pics\\Five.png"));
-			sixImg = new Image(new FileInputStream("Pics\\Six.png"));
-			sevenImg = new Image(new FileInputStream("Pics\\Seven.png"));
-			eightImg = new Image(new FileInputStream("Pics\\Eight.png"));
+			testImg = new Image(new FileInputStream(currDir + "/Pics/Test.png"));
+			bombImg = new Image(new FileInputStream(currDir + "/Pics/Bomb.png"));
+			flagImg = new Image(new FileInputStream(currDir + "/Pics/Flag.png"));
+			emptyImg = new Image(new FileInputStream(currDir + "/Pics/Empty.png"));
+			oneImg = new Image(new FileInputStream(currDir + "/Pics/One.png"));
+			twoImg = new Image(new FileInputStream(currDir + "/Pics/Two.png"));
+			threeImg = new Image(new FileInputStream(currDir + "/Pics/Three.png"));
+			fourImg = new Image(new FileInputStream(currDir + "/Pics/Four.png"));
+			fiveImg = new Image(new FileInputStream(currDir + "/Pics/Five.png"));
+			sixImg = new Image(new FileInputStream(currDir + "/Pics/Six.png"));
+			sevenImg = new Image(new FileInputStream(currDir + "/Pics/Seven.png"));
+			eightImg = new Image(new FileInputStream(currDir + "/Pics/Eight.png"));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
